@@ -16,6 +16,9 @@ jobs:
           distribution: 'temurin'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          api: 28
+          build-tools: 28.0.0
       - id: get-project
         name: Get project name
         run: echo "PROJECT=$(cat project-to-build)" >> $GITHUB_OUTPUT
